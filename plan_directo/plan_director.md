@@ -22,13 +22,23 @@ El alcance inicial comprende hiperproductividad interna, I+D en agentes y unific
 | --- | --- | --- |
 | Interno | Atención al cliente · JZ1 | Identificada; alcance y estado por relevar |
 | Interno | Soporte · JZ2 | Identificada; alcance y estado por relevar |
-| Interno | Migrador | Identificada; alcance y estado por relevar |
+| Interno | [Migrador](#migrador) | En construcción; todavía no debe ser tomada |
 | Interno | Implementador y posimplementación | Identificada; alcance y estado por relevar |
 | Transversal | Iniciativa para toda la empresa | Por definir; Ale la trabajará inicialmente |
 | Externo | APX y JZ plataforma | Identificada; alcance y estado por relevar |
 | Externo | Ambiente de desarrollo de sistemas en general | Referencias del borrador: Kelo, Guille, Hito, devman; alcance por relevar |
 
 > 💡 **Lectura del portafolio:** una iniciativa identificada no equivale a un proyecto autorizado. Cada proyecto necesita acordar su resultado, responsable, recursos y criterio de aceptación.
+
+### Agente migrador {#migrador}
+
+> Esta tarea está en construcción y todavía no debe ser tomada.
+
+**Objetivo:** asistir en la migración de Odoo, como parte de la iniciativa Migrador ya inventariada.
+
+**Alcance:** pendiente de más detalles. La documentación detallada y las referencias requieren acceso autorizado en Odoo.
+
+**Seguimiento:** [tarea 39779 · Agente migrador](https://www.hitofusion.com/web#id=39779&cids=10&menu_id=114&action=198&active_id=378&model=project.task&view_type=form).
 
 ## Capacidades transversales para agentes {#capacidades}
 

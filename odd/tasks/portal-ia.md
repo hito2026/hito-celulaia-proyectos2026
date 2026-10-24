@@ -9,9 +9,9 @@ S3. "La página tiene que tener el estilo que usa la app Notion (menu lateral, t
 S4. "Repositorio y web públicos" (explicit visibility selection).
 
 ## Tasks
-T1 | S2 | inline: preserve initial draft and structure an explicitly provisional PMBOK-oriented plan | done | commit: included in plan work unit
-T2 | S2-S3 | inline: single-source Jekyll site, responsive Notion-like layout, structural tests and README | in_progress | commit: pending
-T3 | S1-S4 | inline + independent verifier (Risk: item 5, public deployment): initialize Git, create/sync remote, enable Pages and verify deployment | pending | commit: pending
+T1 | S2 | inline: preserve initial draft and structure an explicitly provisional PMBOK-oriented plan | done | commit: 218d60a
+T2 | S2-S3 | inline: single-source Jekyll site, responsive Notion-like layout, structural tests and README | done | commit: site work unit pending
+T3 | S1-S4 | inline + independent verifier (Risk: item 5, public deployment): initialize Git, create/sync remote, enable Pages and verify deployment | in_progress | commit: deployment evidence pending
 
 ## Log
 L1. Original request: "este espacio es para coordinar toda la gestión de los proyecto del área de la IA de la empresa Hitofusion. 
@@ -21,4 +21,6 @@ L2. Human selected public repository and public website after disclosure of inte
 L3. Actual input path: plan_directo/plan_director.md. Authenticated GitHub account: wsf, active organization member. Target repository did not exist. No Git repository or configured Git author in working directory.
 L4. Architecture: GitHub Pages managed Jekyll build, root index.html includes the canonical Markdown with markdownify. No custom CI, JavaScript, external fonts, or duplicated plan. Preserve original separately. No new approved dates/budgets/assignments.
 L5. Engram save failed: installed binary predates required v2.0.0-rc.11. File is the durable tracking source until memory is available.
+L7. T1 inventory/roles/proposal-label checks passed. T2 observed RED (4 missing-file errors), then GREEN (4/4 unittest checks) and git diff --check passed. No old shared command exists for differential testing. Real Jekyll/rendered HTTP verification belongs to deployment T3. No local browser or Jekyll available.
+L8. ASSESS escalation item 5 requested independent verification, but subagent runtime denied the launch despite explicit Risk: item 5 in its prompt. Verifier unavailable; no retry per policy. Local checks stand; visual browser review remains unavailable. Engram remains incompatible.
 L6. PMI primary page https://www.pmi.org/standards/pmbok returned HTTP 403; avoid edition-specific/current-edition claims or claims of certification. GitHub Pages official setup documentation retrieved successfully.

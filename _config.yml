@@ -1,0 +1,17 @@
+title: Célula IA · Hitofusion
+description: >-
+  Plan director y portafolio de proyectos de inteligencia artificial
+  de Hitofusion.
+url: https://hito2026.github.io
+baseurl: /hito-celulaia-proyectos2026
+lang: es
+markdown: kramdown
+kramdown:
+  input: GFM
+exclude:
+  - odd/
+  - tests/
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - vendor/

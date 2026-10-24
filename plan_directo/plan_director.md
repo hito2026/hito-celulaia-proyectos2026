@@ -30,6 +30,42 @@ El alcance inicial comprende hiperproductividad interna, I+D en agentes y unific
 
 > 💡 **Lectura del portafolio:** una iniciativa identificada no equivale a un proyecto autorizado. Cada proyecto necesita acordar su resultado, responsable, recursos y criterio de aceptación.
 
+## Capacidades transversales para agentes {#capacidades}
+
+MAPE-K y Testing son capacidades propuestas para servir a varios agentes del portafolio, **no nuevos proyectos independientes**. Sus requisitos iniciales están registrados en Odoo; el alcance detallado y las decisiones técnicas siguen pendientes. No se afirma que su implementación haya comenzado. No hay herramientas seleccionadas, responsables asignados ni fechas comprometidas para estas capacidades.
+
+### MAPE-K · supervisión, auditoría y alertas
+
+**Objetivo:** investigar una capacidad de supervisión de agentes que permita observar su funcionamiento, auditar resultados y definir alertas ante comportamientos problemáticos. Un caso a relevar es el agente que repite preguntas sin dar una respuesta ni generar un ticket.
+
+**Fases iniciales propuestas:**
+
+1. Investigar MAPE-K y relevar necesidades de supervisión comunes a varios agentes.
+2. Acordar el alcance inicial y los criterios para auditar y alertar.
+3. Diseñar la solución y evaluar alternativas técnicas.
+4. Implementar y validar lo que se apruebe, después de esas definiciones.
+
+**Pendiente:** precisar qué observar, qué situaciones requieren alertas y cómo evaluar los resultados; decidir arquitectura y herramientas sin anticipar su elección.
+
+**Seguimiento:** [tarea 39776 · MAPE-K](https://www.hitofusion.com/web#id=39776&cids=10&menu_id=114&action=198&active_id=378&model=project.task&view_type=form).
+
+### Testing · simulaciones repetibles y regresión
+
+**Objetivo:** definir una capacidad de pruebas para varios agentes mediante simulaciones de usuarios repetibles y pruebas de regresión. Debe permitir evaluar casos como las preguntas reiteradas sin respuesta o ticket y comparar resultados al cambiar un agente.
+
+**Fases iniciales propuestas:**
+
+1. Relevar necesidades y estudiar la referencia existente de J1.
+2. Acordar escenarios, alcance y criterios de aceptación de las pruebas.
+3. Diseñar el enfoque de simulación y regresión; evaluar herramientas.
+4. Implementar y validar el alcance aprobado.
+
+**Pendiente:** definir qué agentes y flujos cubrir inicialmente, qué resultados comparar y qué tecnología usar. La referencia no implica una elección técnica para esta capacidad.
+
+**Referencia disponible:** [guía del simulador de conversaciones de tickets de J1](https://github.com/hito2026/hito-celulaia-proyectos2026/blob/main/docs/j1/jinzo-whatsapp-ticket-simulator.md). Documenta un simulador preexistente del flujo de tickets, **no la implementación de la nueva aplicación de diagnóstico**. Se publica como referencia documental; sus comandos y resultados de pruebas pertenecen al proyecto de origen y no se han ejecutado ni validado en esta publicación.
+
+**Seguimiento:** [tarea 39777 · Testing](https://www.hitofusion.com/web#id=39777&cids=10&menu_id=114&action=198&active_id=378&model=project.task&view_type=form).
+
 ## 👥 Gobierno y responsabilidades {#gobierno}
 
 ### Organización indicada en el borrador

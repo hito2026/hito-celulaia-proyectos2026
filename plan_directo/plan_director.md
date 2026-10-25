@@ -20,7 +20,7 @@ El alcance inicial comprende hiperproductividad interna, I+D en agentes y unific
 
 | Ámbito | Iniciativa | Situación documentada |
 | --- | --- | --- |
-| Interno | Atención al cliente · JZ1 | Identificada; alcance y estado por relevar |
+| Interno | [Atención al cliente · JZ1](#j1-calidad) | Asistencia implementada; mejoras de calidad por definir |
 | Interno | Soporte · JZ2 | Identificada; alcance y estado por relevar |
 | Interno | [Migrador](#migrador) | En construcción; todavía no debe ser tomada |
 | Interno | Implementador y posimplementación | Identificada; alcance y estado por relevar |
@@ -29,6 +29,24 @@ El alcance inicial comprende hiperproductividad interna, I+D en agentes y unific
 | Externo | Ambiente de desarrollo de sistemas en general | Referencias del borrador: Kelo, Guille, Hito, devman; alcance por relevar |
 
 > 💡 **Lectura del portafolio:** una iniciativa identificada no equivale a un proyecto autorizado. Cada proyecto necesita acordar su resultado, responsable, recursos y criterio de aceptación.
+
+### J1 · Calidad de respuestas por WhatsApp {#j1-calidad}
+
+La asistencia de primera línea de J1 (JZ1 en el inventario) está implementada; esta iniciativa propone mejorar la calidad de la conversación actual, no crear otro proyecto de asistencia.
+
+**Objetivo:** acordar un estándar de calidad de Hito para respuestas concretas y pertinentes.
+
+**Alcance propuesto:**
+
+- Definir entre **10–20 casos de uso core**, con la calidad esperada explícita para cada uno.
+- Lograr un comportamiento robusto en los casos de uso no core.
+- Prever el aporte de MAPE-K a la mejora continua; su integración no está implementada como parte de esta iniciativa.
+
+**Pendiente:** definir el alcance, los umbrales de calidad y las decisiones técnicas. No se asignan responsables ni se comprometen fechas.
+
+**Separación de alcance:** mejorar la conversación actual es distinto de la aplicación web de diagnóstico de la tarea 39775.
+
+**Seguimiento:** [tarea 39784 · J1 · Calidad de respuestas](https://www.hitofusion.com/web#id=39784&cids=10&menu_id=114&action=198&active_id=378&model=project.task&view_type=form).
 
 ### Agente migrador {#migrador}
 

@@ -23,7 +23,7 @@ El alcance inicial comprende hiperproductividad interna, I+D en agentes y unific
 | Interno | [Atención al cliente · JZ1](#j1-calidad) | Asistencia implementada; mejoras de calidad por definir |
 | Interno | Soporte · JZ2 | Identificada; alcance y estado por relevar |
 | Interno | [Migrador](#migrador) | En construcción; todavía no debe ser tomada |
-| Interno | Implementador y posimplementación | Identificada; alcance y estado por relevar |
+| Interno | [Implementador y posimplementación](#post-implementacion) | Etapa 2: requisitos y contexto por documentar; alcance por definir |
 | Transversal | Iniciativa para toda la empresa | Por definir; Ale la trabajará inicialmente |
 | Externo | APX y JZ plataforma | Identificada; alcance y estado por relevar |
 | Externo | Ambiente de desarrollo de sistemas en general | Referencias del borrador: Kelo, Guille, Hito, devman; alcance por relevar |
@@ -57,6 +57,18 @@ La asistencia de primera línea de J1 (JZ1 en el inventario) está implementada;
 **Alcance:** pendiente de más detalles. La documentación detallada y las referencias requieren acceso autorizado en Odoo.
 
 **Seguimiento:** [tarea 39779 · Agente migrador](https://www.hitofusion.com/web#id=39779&cids=10&menu_id=114&action=198&active_id=378&model=project.task&view_type=form).
+
+### Agente post implementación · Etapa 2 {#post-implementacion}
+
+**Objetivo:** continuar el trabajo de postimplementación asociado al agente de implementación, relevando las necesidades de clientes e implementadores. Atender esas necesidades es una aspiración, no un compromiso de alcance ilimitado ni una afirmación de que ya estén todas identificadas. El nombre de la etapa no implica que la anterior haya concluido.
+
+**Estado:** requisitos y contexto pendientes de documentar; no se afirma que la implementación haya comenzado.
+
+**Trabajo inicial:** documentar los requisitos y el contexto; a partir de ellos, definir objetivos, alcance y exclusiones, y tareas.
+
+**Pendiente:** acordar alcance, funciones, estrategia e implementación técnica. No hay responsables asignados ni fechas comprometidas para esta etapa.
+
+**Seguimiento:** [tarea 39786 · Agente post implementación · Etapa 2](https://www.hitofusion.com/web#id=39786&cids=10&menu_id=114&action=198&active_id=378&model=project.task&view_type=form).
 
 ## Capacidades transversales para agentes {#capacidades}
 

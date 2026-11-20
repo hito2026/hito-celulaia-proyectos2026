@@ -1,0 +1,250 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow, noarchive">
+  <title>Balance ejecutivo · Célula de IA · Hitofusión</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #18243b;
+      --muted: #536174;
+      --line: #dce3eb;
+      --paper: #ffffff;
+      --canvas: #f1f4f8;
+      --accent: #17665f;
+      --red-bg: #fbe5e7;
+      --red-ink: #8d1825;
+      --yellow-bg: #fff1bd;
+      --yellow-ink: #704d00;
+      --green-bg: #e2f3e6;
+      --green-ink: #215c38;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-padding-top: 20px; }
+    body {
+      margin: 0;
+      color: var(--ink);
+      background: var(--canvas);
+      font: 16px/1.65 system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+    a { color: var(--accent); text-underline-offset: 3px; }
+    a:focus-visible { outline: 3px solid var(--accent); outline-offset: 4px; }
+    .skip { position: absolute; top: -80px; left: 20px; padding: 12px; background: white; }
+    .skip:focus { top: 10px; z-index: 2; }
+    .report { max-width: 1140px; margin: 36px auto; background: var(--paper); border: 1px solid var(--line); border-radius: 18px; overflow: hidden; }
+    .hero { padding: 44px 48px 36px; background: #18243b; color: white; }
+    .hero-top { display: flex; align-items: center; justify-content: space-between; gap: 16px; margin-bottom: 26px; }
+    .brand { font-size: 12px; font-weight: 750; letter-spacing: .16em; text-transform: uppercase; }
+    .confidential { border: 1px solid #a2b3cc; border-radius: 20px; padding: 4px 12px; font-size: 11px; letter-spacing: .08em; white-space: nowrap; }
+    h1 { margin: 0 0 14px; font-size: clamp(30px, 4.5vw, 48px); line-height: 1.12; letter-spacing: -.035em; }
+    .hero p { max-width: 760px; margin: 0; color: #d9e2ef; }
+    .period { margin-top: 23px; color: #d9e2ef; font-size: 13px; }
+    nav { display: flex; flex-wrap: wrap; gap: 9px 22px; padding: 17px 48px; border-bottom: 1px solid var(--line); background: #fafbfd; }
+    nav a { font-size: 12px; font-weight: 650; color: var(--muted); text-decoration: none; }
+    main { padding: 34px 48px 14px; }
+    section { margin-bottom: 36px; }
+    h2 { margin: 0 0 18px; font-size: 25px; line-height: 1.25; letter-spacing: -.025em; }
+    h3 { margin: 0 0 9px; font-size: 17px; line-height: 1.4; }
+    p { margin: 0 0 14px; }
+    ul, ol { margin: 10px 0 0; padding-left: 21px; }
+    li { margin-bottom: 9px; }
+    .eyebrow { display: block; color: var(--accent); font-size: 11px; font-weight: 750; letter-spacing: .12em; text-transform: uppercase; margin-bottom: 8px; }
+    .summary { background: #edf6f4; border-left: 5px solid var(--accent); padding: 23px 26px; border-radius: 0 10px 10px 0; }
+    .summary p:last-child { margin-bottom: 0; }
+    .summary-lead { font-size: 20px; line-height: 1.45; font-weight: 700; }
+    .kpis { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 12px; margin: 22px 0 12px; }
+    .kpi { border: 1px solid var(--line); border-radius: 10px; padding: 16px; }
+    .kpi .value { display: block; font-size: 34px; font-weight: 750; line-height: 1.2; font-variant-numeric: tabular-nums; }
+    .kpi .label { display: block; font-size: 12px; color: var(--muted); margin-top: 5px; }
+    .small { color: var(--muted); font-size: 13px; }
+    .legend { display: flex; flex-wrap: wrap; gap: 8px; margin: 16px 0; }
+    .status { display: inline-block; border-radius: 5px; padding: 4px 9px; font-size: 12px; font-weight: 650; }
+    .done { background: var(--red-bg); color: var(--red-ink); }
+    .partial { background: var(--yellow-bg); color: var(--yellow-ink); }
+    .not-done { background: var(--green-bg); color: var(--green-ink); }
+    .unknown { background: #e9edf3; color: #40516a; }
+    .table-wrap { overflow-x: auto; border: 1px solid var(--line); border-radius: 10px; margin: 16px 0; }
+    table { width: 100%; border-collapse: collapse; font-size: 14px; }
+    caption { text-align: left; padding: 14px 16px; font-weight: 650; background: #f6f8fb; }
+    th, td { padding: 13px 16px; text-align: left; vertical-align: top; border-bottom: 1px solid var(--line); }
+    thead th { background: #f6f8fb; font-size: 12px; }
+    tbody tr:last-child > * { border-bottom: 0; }
+    .numbers td { font-variant-numeric: tabular-nums; }
+    .total > * { background: #edf2f7; font-weight: 750; }
+    .note { padding: 16px 20px; border: 1px solid #e5d29e; background: #fffaf0; border-radius: 9px; font-size: 14px; }
+    .note strong { color: #704d00; }
+    .note p:last-child { margin-bottom: 0; }
+    .grid-two { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
+    .card { border: 1px solid var(--line); border-radius: 10px; padding: 21px; }
+    .card p:last-child { margin-bottom: 0; }
+    .evidence { display: block; font-size: 12px; color: var(--muted); margin-top: 9px; }
+    .actions { list-style: none; padding: 0; counter-reset: actions; }
+    .actions li { position: relative; padding: 0 0 17px 43px; margin-bottom: 15px; border-bottom: 1px solid var(--line); counter-increment: actions; }
+    .actions li::before { content: counter(actions); position: absolute; left: 0; top: 0; width: 28px; height: 28px; display: grid; place-items: center; border-radius: 50%; background: #e7f0ef; color: var(--accent); font-size: 13px; font-weight: 750; }
+    .actions strong { display: block; margin-bottom: 3px; }
+    .closing { padding: 25px; border-radius: 10px; background: #18243b; color: white; }
+    .closing h2 { font-size: 21px; }
+    .closing p { color: #e1e8f2; margin: 0; }
+    .method { border-top: 1px solid var(--line); padding-top: 23px; }
+    footer { padding: 0 48px 30px; color: var(--muted); font-size: 11px; }
+    @media (max-width: 760px) {
+      .report { margin: 0; border: 0; border-radius: 0; }
+      .hero { padding: 30px 22px; }
+      nav { padding: 15px 22px; }
+      main { padding: 25px 22px 10px; }
+      footer { padding: 0 22px 24px; }
+      .kpis { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .kpis .kpi:first-child { grid-column: 1 / -1; }
+      .grid-two { grid-template-columns: 1fr; }
+      th, td { padding: 11px; }
+      .summary { padding: 20px; }
+    }
+    @page { size: A4; margin: 14mm; }
+    @media print {
+      body { background: white; font-size: 10pt; line-height: 1.45; }
+      .report { max-width: none; margin: 0; border: 0; border-radius: 0; }
+      .hero { padding: 0 0 18px; background: white; color: #18243b; border-bottom: 2px solid #18243b; }
+      .hero p, .period { color: #536174; }
+      h1 { font-size: 28pt; }
+      .hero-top { margin-bottom: 16px; }
+      .confidential { border-color: #536174; }
+      nav, .skip { display: none; }
+      main { padding: 22px 0 0; }
+      section { margin-bottom: 25px; }
+      h2 { font-size: 17pt; break-after: avoid; }
+      h3 { font-size: 12pt; break-after: avoid; }
+      .kpis { grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 7px; }
+      .kpis .kpi:first-child { grid-column: auto; }
+      .kpi { padding: 10px; }
+      .kpi .value { font-size: 24pt; }
+      .kpi .label { font-size: 9pt; }
+      .small, .evidence { font-size: 9pt; }
+      .summary-lead { font-size: 13pt; }
+      .table-wrap { overflow: visible; }
+      table { font-size: 9pt; }
+      thead { display: table-header-group; }
+      tr, .card, .kpi, .note, .closing { break-inside: avoid; }
+      .grid-two { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .actions li { break-inside: avoid; }
+      .closing { background: #eef2f6; color: #18243b; }
+      .closing p { color: #18243b; }
+      footer { padding: 10px 0 0; }
+      a { color: inherit; }
+    }
+  </style>
+</head>
+<body>
+  <a class="skip" href="#contenido">Saltar al informe</a>
+  <article class="report">
+    <header class="hero">
+      <div class="hero-top"><span class="brand">Hitofusión · Célula de IA</span><span class="confidential">Versión pública</span></div>
+      <h1>Balance ejecutivo</h1>
+      <p>Avances, cumplimiento de compromisos y evolución del modelo de gestión.</p>
+      <div class="period">27 de octubre — 20 de noviembre de 2026 · Cuatro semanas documentadas</div>
+    </header>
+    <nav aria-label="Secciones del informe">
+      <a href="#resumen">Resumen</a><a href="#cumplimiento">Cumplimiento</a><a href="#avances">Avances</a><a href="#gestion">Gestión</a><a href="#acciones">Próximo ciclo</a><a href="#metodologia">Fuentes y límites</a>
+    </nav>
+    <main id="contenido">
+      <section id="resumen" aria-labelledby="titulo-resumen">
+        <span class="eyebrow">Lectura principal</span>
+        <h2 id="titulo-resumen">Avance técnico, con una brecha de cierre</h2>
+        <div class="summary">
+          <p class="summary-lead">Hubo avances y resolución de necesidades operativas, pero baja previsibilidad en el cumplimiento semanal.</p>
+          <p>La principal brecha no aparece en la generación de ideas o actividad, sino en convertir ese trabajo en entregas terminadas, verificadas y aceptadas dentro del plazo acordado.</p>
+          <p>La coordinación sostuvo la continuidad entre desarrollo, soporte e investigación. El proceso observado todavía depende de una intervención intensa del PM.</p>
+        </div>
+      </section>
+      <section id="cumplimiento" aria-labelledby="titulo-cumplimiento">
+        <span class="eyebrow">Semanas 1 a 3</span>
+        <h2 id="titulo-cumplimiento">Cumplimiento declarado</h2>
+        <div class="kpis" aria-label="Indicadores de los compromisos semanales">
+          <div class="kpi"><span class="value">17</span><span class="label">Compromisos semanales</span></div>
+          <div class="kpi"><span class="value">2</span><span class="label">Cumplidos</span></div>
+          <div class="kpi"><span class="value">7</span><span class="label">Parciales</span></div>
+          <div class="kpi"><span class="value">7</span><span class="label">No cumplidos</span></div>
+          <div class="kpi"><span class="value">1</span><span class="label">Marca ambigua</span></div>
+        </div>
+        <p class="small">Son compromisos semanales, algunos repetidos o ampliados, no 17 proyectos distintos. El recuento no pondera el tamaño ni mide productividad individual.</p>
+        <div class="legend" aria-label="Convención de colores indicada por el PM">
+          <span class="status done">Rojo = cumplido</span><span class="status partial">Amarillo = parcial</span><span class="status not-done">Verde = no cumplido</span><span class="status unknown">Sin definición = no clasificado</span>
+        </div>
+        <div class="table-wrap">
+          <table class="numbers">
+            <caption>Objetivos semanales según los colores del registro</caption>
+            <thead><tr><th scope="col">Semana</th><th scope="col">Cumplidos</th><th scope="col">Parciales</th><th scope="col">No cumplidos</th><th scope="col">Ambiguos</th></tr></thead>
+            <tbody>
+              <tr><th scope="row">1 · 30/10</th><td>1</td><td>1</td><td>1</td><td>0</td></tr>
+              <tr><th scope="row">2 · 06/11</th><td>1</td><td>1</td><td>4</td><td>1</td></tr>
+              <tr><th scope="row">3 · 13/11</th><td>0</td><td>5</td><td>2</td><td>0</td></tr>
+              <tr class="total"><th scope="row">Total</th><td>2</td><td>7</td><td>7</td><td>1</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="note">
+          <p><strong>Semana 4: cierre incompleto.</strong> Cortafuegos de mensajes repetidos y matriz de riesgos figuran en rojo. Otros nueve entregables no tienen clasificación; no corresponde contarlos como incumplidos. El bloque de profesionalismo/metodología tampoco tiene una evaluación comparable.</p>
+          <p><strong>Ambigüedad:</strong> el objetivo de completar J1 en la semana 2 mezcla texto rojo con fondo verde. Se dejó sin clasificación. Además, las minutas del 3 y 4/11 usaron el rojo para objetivos modificados; conviene fijar una leyenda estable.</p>
+        </div>
+      </section>
+      <section id="avances" aria-labelledby="titulo-avances">
+        <span class="eyebrow">Resultados registrados</span>
+        <h2 id="titulo-avances">Qué avanzó y qué falta acreditar</h2>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th scope="col">Frente</th><th scope="col">Evidencia registrada</th><th scope="col">Lectura ejecutiva</th></tr></thead>
+            <tbody>
+              <tr><th scope="row">Agentes de clientes</th><td>Entregas de comercial y cobranzas; un agente de cliente reportado en producción con monitor el 11/11; cierre de 15 tickets de cobranza informado el 16/11.</td><td>Trabajo operativo relevante que compitió por capacidad con el desarrollo del portafolio.</td></tr>
+              <tr><th scope="row">J1 por WhatsApp</th><td>El 6/11 se informan cambios y documentación, con pruebas pendientes. El 10/11 se informa su ejecución.</td><td>Parte de la validación aparece después del cierre semanal previsto.</td></tr>
+              <tr><th scope="row">Web y computer use</th><td>Estructuras, videos, entregables y pruebas entre el 6 y el 17/11. La asistencia web se describe en pruebas locales el 17/11.</td><td>Un prototipo o una entrega técnica no equivalen a operación productiva validada.</td></tr>
+              <tr><th scope="row">MAPE-K</th><td>Investigación y pruebas, seguidas de un plugin DSH reportado estable el 19/11, con ejecución posterior en otra herramienta.</td><td>Hay desarrollo de capacidad; no queda acreditado el circuito completo de automatización e integración.</td></tr>
+              <tr><th scope="row">Seguridad y confiabilidad</th><td>Pruebas de ataques, correcciones, matriz de riesgos y ajuste del bridge de mensajería.</td><td>Aparecen controles concretos; algunos registros aún dejan pendiente documentar y transferir el conocimiento.</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="small"><strong>Diferencia a conciliar:</strong> las minutas del 29 y 30/10 describen agentes de cuentas de clientes funcionando, mientras el objetivo de estabilización figura verde. Funcionamiento declarado y cierre aceptado no son necesariamente lo mismo.</p>
+      </section>
+      <section id="gestion" aria-labelledby="titulo-gestion">
+        <span class="eyebrow">Diagnóstico de gestión</span>
+        <h2 id="titulo-gestion">Por qué cuesta convertir avance en cierre</h2>
+        <div class="grid-two">
+          <div class="card"><h3>1. Frentes simultáneos</h3><p>El plan pasa de tres objetivos iniciales a siete en las semanas siguientes y once entregables en la cuarta, más exigencias metodológicas. Soporte, estabilización, migraciones, investigación y desarrollo compiten por capacidad.</p><span class="evidence">Lectura: riesgo de desalineación entre compromisos y disponibilidad real, especialmente mientras continúa la atención a cuentas de clientes.</span></div>
+          <div class="card"><h3>2. Alcance y aceptación cambiantes</h3><p>El 2/11 aparece la pregunta «¿Qué sería mínimo?» para MAPE-K. También se alterna entre estructura, primer entregable, funcionamiento y producción.</p><span class="evidence">Lectura: mucho trabajo realizado puede no alcanzar una expectativa que se precisa durante la ejecución.</span></div>
+          <div class="card"><h3>3. Arrastres sin decisión</h3><p>El flujo de un agente en Odoo atraviesa desarrollo, revisión, fallas y dependencias. Un ticket del agente implementador reaparece entre el 13 y el 20/11 sin cierre registrado.</p><span class="evidence">Lectura: repetir el pendiente en la DM no sustituye priorizarlo, bloquearlo, reprogramarlo o descartarlo.</span></div>
+          <div class="card"><h3>4. Validaciones concentradas</h3><p>Además de dependencias externas, hay pendientes del director técnico: definición metodológica el 13/11 y una demostración no realizada por falta de reunión con la dirección técnica, registrada el 20/11.</p><span class="evidence">Lectura: el PM/director técnico también puede ser un cuello de botella; no explica por sí solo todos los desvíos.</span></div>
+        </div>
+        <h3 style="margin-top: 25px;">El doble rol del PM y director técnico</h3>
+        <div class="grid-two">
+          <div class="card"><h3>Gestión del proyecto</h3><p>Se observa seguimiento sostenido, reasignación, coordinación de dependencias y exigencia de pruebas y documentación. El PM asentó <strong>16 de las 19 entradas con contenido</strong>: evidencia de centralización del registro, no de horas trabajadas.</p></div>
+          <div class="card"><h3>Dirección técnica</h3><p>Se impulsaron arquitectura, DSH, criterios de aceptación, pruebas, seguridad, CI/CD y nuevas automatizaciones. La capacidad de orientar se combina con una dependencia elevada del líder para recordar, desbloquear y validar.</p></div>
+        </div>
+        <p style="margin-top: 17px;"><strong>La microgestión sostuvo la continuidad, pero todavía no se convirtió en autonomía operativa consolidada.</strong> No hay evidencia suficiente para atribuir esa situación a falta de esfuerzo individual.</p>
+      </section>
+      <section id="acciones" aria-labelledby="titulo-acciones">
+        <span class="eyebrow">Próximo ciclo</span>
+        <h2 id="titulo-acciones">Seis acciones recomendadas</h2>
+        <ol class="actions">
+          <li><strong>Reducir compromisos simultáneos.</strong> Planificar con capacidad real y reservar explícitamente atención operativa e investigación.</li>
+          <li><strong>Definir «terminado» antes de empezar.</strong> Acordar resultado, entorno, prueba, evidencia y persona que acepta.</li>
+          <li><strong>Versionar los cambios de objetivo.</strong> Distinguir la meta original de las ampliaciones realizadas durante la semana.</li>
+          <li><strong>Resolver el tratamiento de los arrastres.</strong> Cada pendiente necesita una decisión, responsable y próxima fecha de revisión.</li>
+          <li><strong>Distribuir el registro y reservar validaciones.</strong> Cada responsable informa sus avances; el PM concentra tiempo en prioridades, decisiones y aceptación.</li>
+          <li><strong>Medir resultados, no sólo actividad.</strong> Cumplimiento en fecha, tiempo de ciclo, carga de soporte, errores/retrabajo y beneficio para los usuarios.</li>
+        </ol>
+        <p class="small">«Profesionalismo sénior» debería traducirse en conductas observables —planificación, pruebas, comunicación y trazabilidad—, no funcionar como una etiqueta general.</p>
+      </section>
+      <section class="closing" aria-labelledby="titulo-cierre">
+        <h2 id="titulo-cierre">Decisión de foco para dirección</h2>
+        <p>Priorizar consolidación, menor dispersión y aceptación basada en evidencia. El objetivo no es sumar iniciativas, sino transformar el conocimiento y el trabajo realizado en resultados confiables, reutilizables y menos dependientes del empuje diario del PM.</p>
+      </section>
+      <section id="metodologia" class="method" aria-labelledby="titulo-metodologia">
+        <h2 id="titulo-metodologia">Fuentes y límites</h2>
+        <p class="small">Fuente: objetivos y minutas internos, con cuatro bloques semanales y 19 comentarios con contenido en 17 fechas. El 18/11 se registra que no hubo DM formal. Las marcas y las minutas son declaraciones documentadas, no una certificación técnica independiente.</p>
+        <p class="small">Corte: objetivos actualizados el 20/11/2026 a las 17:15 UTC; último comentario analizado del 20/11 a las 11:56 UTC. No se auditaron repositorios, pruebas ni planillas enlazadas. No se estimaron horas, costos, retorno económico o productividad individual. No se convirtió cumplimiento parcial en un porcentaje arbitrario de avance.</p>
+      </section>
+    </main>
+    <footer>Hitofusión · Versión pública · Período documental 27/10–20/11/2026 · Se retiraron los identificadores directos del equipo y de clientes; se conservan cifras agregadas y análisis por roles. Esto no garantiza anonimato absoluto. Para imprimir o guardar como PDF, usar la opción de impresión del navegador.</footer>
+  </article>
+</body>
+</html>

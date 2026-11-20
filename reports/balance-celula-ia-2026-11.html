@@ -88,6 +88,14 @@
     .closing h2 { font-size: 21px; }
     .closing p { color: #e1e8f2; margin: 0; }
     .method { border-top: 1px solid var(--line); padding-top: 23px; }
+    .appendix details { margin: 12px 0; border: 1px solid var(--line); border-radius: 10px; }
+    .appendix summary { padding: 15px 18px; cursor: pointer; font-weight: 700; }
+    .appendix summary:focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; }
+    .appendix details[open] > summary { border-bottom: 1px solid var(--line); background: #f6f8fb; }
+    .detail-body { padding: 18px 20px; }
+    .detail-body > :last-child { margin-bottom: 0; }
+    .detail-body ul { margin-bottom: 14px; }
+    .goal-list .status { margin-right: 6px; }
     footer { padding: 0 48px 30px; color: var(--muted); font-size: 11px; }
     @media (max-width: 760px) {
       .report { margin: 0; border: 0; border-radius: 0; }
@@ -145,7 +153,7 @@
       <div class="period">27 de octubre — 20 de noviembre de 2026 · Cuatro semanas documentadas</div>
     </header>
     <nav aria-label="Secciones del informe">
-      <a href="#resumen">Resumen</a><a href="#cumplimiento">Cumplimiento</a><a href="#avances">Avances</a><a href="#gestion">Gestión</a><a href="#acciones">Próximo ciclo</a><a href="#metodologia">Fuentes y límites</a>
+      <a href="#resumen">Resumen</a><a href="#cumplimiento">Cumplimiento</a><a href="#avances">Avances</a><a href="#gestion">Gestión</a><a href="#acciones">Próximo ciclo</a><a href="#metodologia">Fuentes y límites</a><a href="#objetivos-detalle">Objetivos en detalle</a><a href="#minutas-detalle">Minutas por fecha</a>
     </nav>
     <main id="contenido">
       <section id="resumen" aria-labelledby="titulo-resumen">
@@ -243,8 +251,225 @@
         <p class="small">Fuente: objetivos y minutas internos, con cuatro bloques semanales y 19 comentarios con contenido en 17 fechas. El 18/11 se registra que no hubo DM formal. Las marcas y las minutas son declaraciones documentadas, no una certificación técnica independiente.</p>
         <p class="small">Corte: objetivos actualizados el 20/11/2026 a las 17:15 UTC; último comentario analizado del 20/11 a las 11:56 UTC. No se auditaron repositorios, pruebas ni planillas enlazadas. No se estimaron horas, costos, retorno económico o productividad individual. No se convirtió cumplimiento parcial en un porcentaje arbitrario de avance.</p>
       </section>
+      <section id="objetivos-detalle" class="appendix" aria-labelledby="titulo-objetivos-detalle">
+        <span class="eyebrow">Anexo · Compromisos del registro</span>
+        <h2 id="titulo-objetivos-detalle">Objetivos semanales en detalle</h2>
+        <p>Estos anexos presentan <strong>síntesis anonimizadas, no transcripciones literales</strong>, del período 27/10–20/11/2026. El detalle de minutas reúne 19 entradas en 17 fechas. Se conserva el corte documental indicado en Fuentes y límites: los avances son declaraciones registradas, no resultados técnicos certificados.</p>
+        <p>Las primeras tres semanas reúnen 17 compromisos: 2 cumplidos, 7 parciales, 7 no cumplidos y 1 ambiguo. La cuarta contiene 11 entregables: 2 cumplidos y 9 sin clasificar, más un control metodológico sin evaluación comparable.</p>
+        <p class="small">Los estados siguen los colores de la fuente: rojo = cumplido; amarillo = parcial; verde = no cumplido. Una marca ambigua o ausente permanece neutral. El verbo de una meta —por ejemplo, «finalizar»— no acredita su cumplimiento; tampoco se deduce el estado de las minutas. El uso del rojo para modificaciones el 3 y 4/11 exige mantener esta cautela.</p>
+        <p class="small">Abra cada encabezado para consultar el detalle. Antes de imprimir o guardar como PDF, abra los apartados que desee incluir; no se presupone que los apartados cerrados se desplieguen al imprimir.</p>
+        <details data-goal-count="3">
+          <summary>Semana 1 · Cierre previsto: 30 de octubre · 3 objetivos</summary>
+          <div class="detail-body">
+            <p class="small">1 cumplido · 1 parcial · 1 no cumplido.</p>
+            <ul class="goal-list">
+              <li><span class="status not-done">No cumplido · verde</span> Estabilizar el agente de asistencia de un cliente.</li>
+              <li><span class="status done">Cumplido · rojo</span> Dejar funcionando el agente postimplementador.</li>
+              <li><span class="status partial">Parcial · amarillo</span> Comenzar el trabajo de J1 de asistencia.</li>
+            </ul>
+          </div>
+        </details>
+        <details data-goal-count="7">
+          <summary>Semana 2 · Cierre previsto: 6 de noviembre · 7 objetivos</summary>
+          <div class="detail-body">
+            <p class="small">1 cumplido · 1 parcial · 4 no cumplidos · 1 ambiguo.</p>
+            <ul class="goal-list">
+              <li><span class="status not-done">No cumplido · verde</span> Tener funcionando una prueba de concepto del asistente personal.</li>
+              <li><span class="status partial">Parcial · amarillo</span> Poner en uso el postimplementador con monitoreo mínimo y seguimiento de adopción.</li>
+              <li><span class="status unknown">Ambiguo · sin clasificación concluyente</span> Completar J1 de asistencia y probar conversaciones difíciles. La fuente mezcla texto rojo con fondo verde.</li>
+              <li><span class="status not-done">No cumplido · verde</span> Dejar funcionando MAPE-K en agentes de clientes.</li>
+              <li><span class="status not-done">No cumplido · verde</span> Avanzar la migración de un cliente y habilitar el entorno de trabajo autorizado.</li>
+              <li><span class="status done">Cumplido · rojo</span> Preparar la etapa 2/3 de soporte para probar casos concretos.</li>
+              <li><span class="status not-done">No cumplido · verde</span> Completar diariamente la planilla de agentes y casos de uso.</li>
+            </ul>
+          </div>
+        </details>
+        <details data-goal-count="7">
+          <summary>Semana 3 · Cierre previsto: 13 de noviembre · 7 objetivos</summary>
+          <div class="detail-body">
+            <p class="small">5 parciales · 2 no cumplidos.</p>
+            <ul class="goal-list">
+              <li><span class="status partial">Parcial · amarillo</span> Finalizar la migración de un cliente.</li>
+              <li><span class="status partial">Parcial · amarillo</span> Alcanzar la mitad de la migración del entorno interno.</li>
+              <li><span class="status not-done">No cumplido · verde</span> Entregar una primera versión de asistencia por computer use.</li>
+              <li><span class="status not-done">No cumplido · verde</span> Entregar la asistencia por pipeline web sobre DSH/Jinzo.</li>
+              <li><span class="status partial">Parcial · amarillo</span> Dejar funcionando MAPE-K.</li>
+              <li><span class="status partial">Parcial · amarillo</span> Dejar funcionando el flujo de un agente en Odoo.</li>
+              <li><span class="status partial">Parcial · amarillo</span> Explorar el entorno de investigación en Slack.</li>
+            </ul>
+          </div>
+        </details>
+        <details data-goal-count="11">
+          <summary>Semana 4 · Cierre previsto: 20 de noviembre · 11 entregables y control metodológico</summary>
+          <div class="detail-body">
+            <p class="small">2 cumplidos · 9 sin clasificar. Cierre incompleto: sin marca no equivale a incumplido.</p>
+            <ul class="goal-list">
+              <li><span class="status unknown">Sin clasificar</span> Poner la asistencia por computer use en producción.</li>
+              <li><span class="status unknown">Sin clasificar</span> Poner la asistencia web en producción.</li>
+              <li><span class="status unknown">Sin clasificar</span> Entregar un MVP de resolución autónoma de tickets.</li>
+              <li><span class="status unknown">Sin clasificar</span> Entregar un MVP del agente Devops.</li>
+              <li><span class="status unknown">Sin clasificar</span> Llevar la metodología de trabajo a un agente.</li>
+              <li><span class="status unknown">Sin clasificar</span> Pasar el migrador a un plugin de Jinzo.</li>
+              <li><span class="status unknown">Sin clasificar</span> Pasar MAPE-K a Jinzo.</li>
+              <li><span class="status unknown">Sin clasificar</span> Cerrar la estabilización de agentes de clientes para liberar capacidad del equipo.</li>
+              <li><span class="status done">Cumplido · rojo</span> Implementar el cortafuegos de mensajes repetidos.</li>
+              <li><span class="status done">Cumplido · rojo</span> Completar la matriz de riesgos.</li>
+              <li><span class="status unknown">Sin clasificar</span> Cerrar el flujo de un agente en Odoo, arrastrado de la semana anterior.</li>
+            </ul>
+            <h3>Control metodológico · No es un duodécimo entregable puntuado</h3>
+            <p>Profesionalismo y metodología: planificación, cumplimiento, pruebas, cortafuegos, comunicación y productividad. Sin evaluación comparable en el corte.</p>
+            <ul>
+              <li>Aplicar la metodología acordada.</li>
+              <li>Versionar en commits los cambios que corresponda.</li>
+              <li>Registrar en la tarea lo realizado y el commit de referencia.</li>
+              <li>Vincular planificación diaria, tarea y commits en el registro del equipo.</li>
+            </ul>
+          </div>
+        </details>
+      </section>
+      <section id="minutas-detalle" class="appendix" aria-labelledby="titulo-minutas-detalle">
+        <span class="eyebrow">Anexo · Evidencia declarada por fecha</span>
+        <h2 id="titulo-minutas-detalle">Minutas por fecha</h2>
+        <p>Síntesis anonimizadas de las 19 entradas, agrupadas en 17 fechas cronológicas. «Próximos pasos» recoge intenciones o acuerdos, no confirma su ejecución. Cuando no se detallan bloqueos, no se interpreta que no existieran.</p>
+        <details data-entry-count="1">
+          <summary>27 de octubre de 2026 · 1 entrada</summary>
+          <div class="detail-body">
+            <p><strong>Avances informados:</strong> se explicó la arquitectura del asistente emergente y el motivo de orientar la asistencia hacia una página web.</p>
+            <p><strong>Pendientes y bloqueos:</strong> la estabilización y entrega del agente de cliente, así como la puesta en marcha del postimplementador, aparecen como trabajo previsto. No se detallan bloqueos.</p>
+            <p><strong>Próximos pasos:</strong> terminar la estabilización y entregar ese día; coordinar con interlocutores la activación del postimplementador, prevista para esa semana.</p>
+          </div>
+        </details>
+        <details data-entry-count="1">
+          <summary>29 de octubre de 2026 · 1 entrada</summary>
+          <div class="detail-body">
+            <p><strong>Avances informados:</strong> se entregaron 16 casos de uso del agente comercial y se declaró que funcionaba; los errores se reportaban por tickets y había seguimiento semanal. En cobranzas se trabajaba sobre 7 casos, con 3 en resolución. Se acordó una puesta en marcha y se propuso ampliar la prueba del postimplementador.</p>
+            <p><strong>Pendientes y bloqueos:</strong> faltaba consultar posibles funcionalidades y casos de uso adicionales. No se detallan bloqueos; el cierre de cobranzas entre viernes y lunes era una previsión, no una entrega confirmada.</p>
+            <p><strong>Próximos pasos:</strong> reunión de puesta en marcha e inducción, comienzo de J1 de asistencia, continuidad de cobranzas y revisión de conversaciones comerciales. Definir MAPE-K y registrar la propuesta en investigación o seguimiento.</p>
+          </div>
+        </details>
+        <details data-entry-count="1">
+          <summary>30 de octubre de 2026 · 1 entrada</summary>
+          <div class="detail-body">
+            <p><strong>Avances informados:</strong> cobranzas había llegado al caso 7 de 7, con cierre anunciado para ese día. El agente de asistencia se declaró estable y sin tickets levantados; se había investigado MAPE-K y coordinado la continuidad de la activación del flujo en Odoo.</p>
+            <p><strong>Pendientes y bloqueos:</strong> seguían pendientes una reunión y J1. Se planteó que aparentemente no se estaba usando el agente de cliente, por confirmar mediante contacto. No se detallan bloqueos.</p>
+            <p><strong>Próximos pasos:</strong> cerrar cobranzas, consultar uso y siguiente agente, continuar investigando MAPE-K y revisar conversaciones para J1. Alinear criterios de aceptación, completar casos de uso y explicar cómo documentar cierres que difieran de lo previsto; se propuso un proceso de estudio del estado del arte.</p>
+          </div>
+        </details>
+        <details data-entry-count="1">
+          <summary>2 de noviembre de 2026 · 1 entrada</summary>
+          <div class="detail-body">
+            <p><strong>Avances informados:</strong> se declaró entregado el agente de cobranzas, estabilizado y funcionando según sus casos. Se avanzó en la idea de monitoreo como primera fase de MAPE-K. Se había realizado una reunión y comenzado el intercambio sobre J1.</p>
+            <p><strong>Pendientes y bloqueos:</strong> faltaban cerrar el diseño e implementación completos de MAPE-K y revisar un archivo de conversaciones. Se cuestionó qué significaba un monitoreo «mínimo» y la viabilidad de comprometer el circuito completo de automejora en la semana.</p>
+            <p><strong>Próximos pasos:</strong> continuar la prueba de concepto del monitor y definir el flujo general; estabilizar el siguiente agente administrativo o de cliente según decisión externa. Mantener foco en J1, pedir feedback del postimplementador, documentar funcionalidades y tomar seguimiento de la migración.</p>
+          </div>
+        </details>
+        <details data-entry-count="1">
+          <summary>3 de noviembre de 2026 · 1 entrada</summary>
+          <div class="detail-body">
+            <p><strong>Avances informados:</strong> se declaró creada la prueba de concepto del monitor y trabajo sobre otras fases de MAPE-K, con estructura definida mediante skills. J1 ya tenía criterios de aceptación y casos de uso, aunque sin un estándar encontrado. Se logró conexión al entorno de migración.</p>
+            <p><strong>Pendientes y bloqueos:</strong> quedaba una gestión de autenticación a cargo de coordinación. La estabilización del siguiente agente se anunciaba para ese día, sin cierre acreditado. Había una incidencia de seguridad en cobranzas por tomar.</p>
+            <p><strong>Próximos pasos:</strong> implementar mejoras en J1 y coordinar trabajo en pareja para un MVP del pipeline web; avanzar MAPE-K, registrar pruebas del postimplementador y revisar casos de uso. Se pidió revisar los objetivos modificados en rojo, sin confundir esa marca de edición con cumplimiento.</p>
+          </div>
+        </details>
+        <details data-entry-count="1">
+          <summary>4 de noviembre de 2026 · 1 entrada</summary>
+          <div class="detail-body">
+            <p><strong>Avances informados:</strong> se reportó corregida y probada una incidencia de seguridad de cobranzas. Se tomó un problema de consulta de precios con dos componentes, se iniciaron mejoras en J1 y hubo investigación y pruebas para el pipeline web.</p>
+            <p><strong>Pendientes y bloqueos:</strong> no se había completado la estabilización prevista ni el arranque coordinado del trabajo en pareja de la etapa 2/3. Se declaró falta de patrones detectados para resolver. Terminar MAPE-K ese día seguía siendo una intención.</p>
+            <p><strong>Próximos pasos:</strong> documentar pruebas de seguridad, investigar un framework de control y continuar el ticket de precios. Precisar criterios de aceptación y pruebas de J1, coordinar pipeline y migración, retomar una necesidad administrativa y dar seguimiento al flujo en Odoo; se pidió un video del entorno de desarrollo.</p>
+          </div>
+        </details>
+        <details data-entry-count="1">
+          <summary>5 de noviembre de 2026 · 1 entrada</summary>
+          <div class="detail-body">
+            <p><strong>Avances informados:</strong> se documentaron pruebas de seguridad y se exploró Promptfoo. Del ticket de precios se terminó el primer componente y se inició el segundo. Hubo coordinación de la etapa 2, un video del entorno ya revisado y contactos por el flujo en Odoo y la necesidad administrativa.</p>
+            <p><strong>Pendientes y bloqueos:</strong> la migración dependía de un aviso externo. Seguían pendientes el segundo componente de soporte, las pruebas de conversaciones difíciles de J1 y la primera entrega del pipeline. Se informó una medida de contención de abuso, sin detallar aquí su operación.</p>
+            <p><strong>Próximos pasos:</strong> dejar evidencia de seguridad, probar MAPE-K con casos reales y aprobación previa antes de una eventual operación automática. Seguir la migración, preparar la entrega del pipeline y resolver un problema de salida de mensajes de WhatsApp.</p>
+          </div>
+        </details>
+        <details data-entry-count="2">
+          <summary>6 de noviembre de 2026 · 2 entradas agrupadas</summary>
+          <div class="detail-body">
+            <p><strong>Avances informados:</strong> los dos reportes del día registran validación del ticket de precios, avance en soporte complejo, pruebas de MAPE-K y un plan de mejora de seguridad. También se informó el inicio de la migración, cambios de J1 documentados con casos en la plantilla, la estructura de la aplicación pipeline y la resolución del problema de mensajes de WhatsApp.</p>
+            <p><strong>Pendientes y bloqueos:</strong> faltaban validar el soporte complejo y dejar MAPE-K automático funcionando. En J1 quedaban las pruebas; en pipeline, terminar el flujo y las instrucciones para probarlo. No se detallan otros bloqueos.</p>
+            <p><strong>Próximos pasos:</strong> validar esos casos, continuar el plan de seguridad y hacer seguimiento de la migración. La estructura y los cambios documentados no equivalen a pruebas completadas ni a operación automática confirmada.</p>
+          </div>
+        </details>
+        <details data-entry-count="1">
+          <summary>10 de noviembre de 2026 · 1 entrada</summary>
+          <div class="detail-body">
+            <p><strong>Avances informados:</strong> continuó el plan de mejora de agentes de cliente. Se reportaron pruebas de J1 por WhatsApp con planillas completas, investigación de computer use con estrategia definida y un plan para mejorar el flujo del agente en Odoo.</p>
+            <p><strong>Pendientes y bloqueos:</strong> MAPE-K automático seguía sin quedar funcionando. La asistencia por pipeline web no se había realizado y se reasignó. No se detallan bloqueos adicionales.</p>
+            <p><strong>Próximos pasos:</strong> tomar el asistente web por pipeline, continuar las mejoras de cliente, iniciar la refactorización de Odoo con intención de terminar al día siguiente y avanzar computer use con meta para el viernes.</p>
+          </div>
+        </details>
+        <details data-entry-count="1">
+          <summary>11 de noviembre de 2026 · 1 entrada</summary>
+          <div class="detail-body">
+            <p><strong>Avances informados:</strong> se hicieron y documentaron pruebas de seguridad, y se creó un skill de testeo. Un agente de cliente fue reportado cerrado y en producción con monitor. Se reparó la carga de facturas de proveedor del agente administrativo y se registraron sus casos.</p>
+            <p><strong>Pendientes y bloqueos:</strong> la refactorización del flujo en Odoo seguía pendiente. Se recibieron 4 tickets de comercial y administración y se mencionaron 30 por procesar y trasladar, sin aclarar si las cantidades se superponen; se indicó que MAPE-K detectaba problemas. No se detallan bloqueos adicionales.</p>
+            <p><strong>Próximos pasos:</strong> monitorear el agente en producción, refactorizar Odoo y planificar computer use en dos entregables, para viernes y martes. La idea de un plugin aún era exploratoria.</p>
+          </div>
+        </details>
+        <details data-entry-count="1">
+          <summary>12 de noviembre de 2026 · 1 entrada</summary>
+          <div class="detail-body">
+            <p><strong>Avances informados:</strong> se corrigieron errores de agentes y el monitoreo no mostraba errores en la revisión realizada hasta ese momento. El pipeline de asistencia se trabajaba en local. La refactorización de Odoo se declaró hecha y enviada a revisión, con ajustes en mensajes de WhatsApp.</p>
+            <p><strong>Pendientes y bloqueos:</strong> quedaban la revisión y el ajuste del agente para interpretar el proceso de Odoo, las validaciones de reconocimiento de usuario y la comprobación del agente de facturas. No se detallan bloqueos; la revisión sin errores no certifica ausencia general de fallas.</p>
+            <p><strong>Próximos pasos:</strong> implementar validaciones con Gherkin y el pipeline local, definir un proceso provisorio de desarrollo y continuar soporte y monitoreo con el equipo de cliente. Planificar el plugin de computer use multiusuario con entregas de viernes y martes.</p>
+          </div>
+        </details>
+        <details data-entry-count="1">
+          <summary>13 de noviembre de 2026 · 1 entrada</summary>
+          <div class="detail-body">
+            <p><strong>Avances informados:</strong> seguían las validaciones de usuario; se consignó una presentación del pipeline con videos, también reiterada como tarea del día. Se revisaron varios tickets y se armó un plan de mejora. Computer use estaba armado, en pruebas y correcciones; se recibió confirmación de buen funcionamiento de la carga de facturas.</p>
+            <p><strong>Pendientes y bloqueos:</strong> coordinación debía definir y circular el proceso provisorio para validarlo en conjunto. La minuta atribuye el fallo del flujo en Odoo a una interrupción de conexión y señala duplicados que provocaron envíos repetidos. Apareció un ticket del agente implementador sin cierre registrado.</p>
+            <p><strong>Próximos pasos:</strong> continuar reuniones y resolución de tickets, preparar indicadores de atenciones y errores, presentar entregables de pipeline y computer use, consultar cierres y coordinar una solución de trabajos en cola. No se acredita aquí la resolución del fallo del flujo.</p>
+          </div>
+        </details>
+        <details data-entry-count="1">
+          <summary>16 de noviembre de 2026 · 1 entrada</summary>
+          <div class="detail-body">
+            <p><strong>Avances informados:</strong> se avanzó en la gestión de la entrega de computer use y se dio por cerrado un ticket tras no reaparecer problemas. La solución de trabajos en cola quedó del lado de desarrollo. Se confirmaron reunión con cliente, preparación de indicadores, presentación del pipeline y cierre de 15 tickets de cobranzas.</p>
+            <p><strong>Pendientes y bloqueos:</strong> el ticket del agente implementador todavía no se había revisado. Quedaban ajustes de computer use y del bridge de mensajería; no se detallan otros bloqueos ni una puesta en producción de los asistentes.</p>
+            <p><strong>Próximos pasos:</strong> revisar urgencias con coordinación, terminar ajustes del asistente y avisar si estaba listo ese día; ajustar el bridge al día siguiente, elaborar la matriz de riesgos y registrar y compartir pruebas como evidencia.</p>
+          </div>
+        </details>
+        <details data-entry-count="1">
+          <summary>17 de noviembre de 2026 · 1 entrada</summary>
+          <div class="detail-body">
+            <p><strong>Avances informados:</strong> la matriz de riesgos quedó en la tarea de estabilización y se compartió evidencia de pruebas en el ticket. La asistencia web estaba en el repositorio y seguía en pruebas locales. Se creó un plugin local de MAPE-K con DSH y en la revisión de tickets no se encontraron urgencias.</p>
+            <p><strong>Pendientes y bloqueos:</strong> seguían las pruebas de asistencia web y MAPE-K; el ajuste del bridge fue tomado ese día, sin cierre informado. El ticket del implementador seguía por revisar. No se detallan bloqueos adicionales ni operación productiva de esos prototipos.</p>
+            <p><strong>Próximos pasos:</strong> ampliar casos de uso y commits, continuar pruebas de MAPE-K, coordinar cuestiones de mensajería y preparar el comienzo del agente Devops. Mantener el ajuste del bridge y la revisión del ticket pendiente.</p>
+          </div>
+        </details>
+        <details data-entry-count="2">
+          <summary>18 de noviembre de 2026 · 2 entradas · Sin DM formal</summary>
+          <div class="detail-body">
+            <p><strong>Intercambios registrados:</strong> una entrada contiene una referencia informativa a un recurso técnico y un video para explicar el concepto de CI/CD que se quería implementar. La otra deja constancia expresa de que <strong>no hubo DM formal</strong> y de una conversación informal sobre resolución autónoma de tickets y un agente Devops para la infraestructura de la célula.</p>
+            <p><strong>Pendientes y bloqueos:</strong> no se detallan avances de implementación, resultados de pruebas ni bloqueos en estas dos entradas. La referencia conceptual no acredita CI/CD implementado.</p>
+            <p><strong>Orientación y próximos pasos:</strong> compartir el concepto de CI/CD y trabajar sobre los dos frentes conversados. No se registran en estas entradas nuevos plazos ni resoluciones técnicas.</p>
+          </div>
+        </details>
+        <details data-entry-count="1">
+          <summary>19 de noviembre de 2026 · 1 entrada</summary>
+          <div class="detail-body">
+            <p><strong>Avances informados:</strong> se continuaron casos de prueba y commits del panel. El plugin MAPE-K en DSH se declaró estable, con uso mediante copia de la solución y ejecución en otra herramienta. Hubo reunión sobre el frente comercial. Se informó realizado el ajuste del bridge de mensajería.</p>
+            <p><strong>Pendientes y bloqueos:</strong> quedaba documentar el ajuste en la base de conocimiento y registrar la tarea del cortafuegos. El ticket del agente implementador seguía pendiente. No se detallan otros bloqueos; la estabilidad del plugin no acredita integración automática completa.</p>
+            <p><strong>Próximos pasos:</strong> mostrar el funcionamiento a coordinación, seguir el agente Devops y comprobar si cubría un caso de ficha de conocimiento. Marcar tareas hechas, documentar el bridge y avanzar la resolución autónoma de tickets.</p>
+          </div>
+        </details>
+        <details data-entry-count="1">
+          <summary>20 de noviembre de 2026 · 1 entrada</summary>
+          <div class="detail-body">
+            <p><strong>Avances informados:</strong> había material en el repositorio para instalar, pero no se realizó la demostración por falta de reunión con coordinación. Para Devops se definieron varios casos de uso y se estaba implementando. Se marcaron tareas realizadas y se creó un plugin de flujos tipo n8n como base para resolver tickets.</p>
+            <p><strong>Pendientes y bloqueos:</strong> seguían la demostración, la documentación del bridge mediante el plugin de flujos y el ticket del agente implementador. No se declara entregada una resolución autónoma completa ni validado el caso de conocimiento de Devops.</p>
+            <p><strong>Próximos pasos:</strong> continuar Devops y cerrar trabajo de cliente; preparar la entrega acordada para el martes siguiente, implementar la documentación mediante el plugin y resolver el ticket pendiente. Se propuso además comentar una tarea de investigación de plugins.</p>
+          </div>
+        </details>
+      </section>
     </main>
-    <footer>Hitofusión · Versión pública · Período documental 27/10–20/11/2026 · Se retiraron los identificadores directos del equipo y de clientes; se conservan cifras agregadas y análisis por roles. Esto no garantiza anonimato absoluto. Para imprimir o guardar como PDF, usar la opción de impresión del navegador.</footer>
+    <footer>Hitofusión · Versión pública · Período documental 27/10–20/11/2026 · Se retiraron los identificadores directos del equipo y de clientes; se conservan cifras agregadas y análisis por roles. Esto no garantiza anonimato absoluto. Para imprimir o guardar como PDF, abrir primero los apartados de detalle que se desee incluir y usar la opción de impresión del navegador.</footer>
   </article>
 </body>
 </html>
